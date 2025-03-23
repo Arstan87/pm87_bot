@@ -1,0 +1,29 @@
+1.Иницилизация проекта : npm init -y
+2. Создаем папку index
+3. telegraf : npm i telegraf
+4. скрыть ip токен: npm i dotenv
+5. автоматический перзагружать сервер в зависимости: npm i -D nodemon
+6. пример простого бота:
+const { Telegraf } = require('telegraf')
+const { message } = require('telegraf/filters')
+
+const bot = new Telegraf(process.env.BOT_TOKEN) сюда в кавычках вставить свой токен
+bot.start((ctx) => ctx.reply('Welcome'))
+bot.help((ctx) => ctx.reply('Send me a sticker'))
+bot.on(message('sticker'), (ctx) => ctx.reply('👍'))
+bot.hears('hi', (ctx) => ctx.reply('Hey there'))
+bot.launch()
+
+// Enable graceful stop
+process.once('SIGINT', () => bot.stop('SIGINT'))
+process.once('SIGTERM', () => bot.stop('SIGTERM'))
+
+7.запустить в терминале: node index.js
+8.запустить и проверить бота. нажать старт
+9.создаем файл: .env
+в него вставляем наш токен взятый из index. затем в .env пишем Любое назв.(BOT_TOKEN =) и равно токен, а в index вместо токена пишем (process.env.назв.(BOT_TOKEN)). а под const пишем require("dotenv").config(); 
+10.автомат. обновл. в package.js убираем test и пишем "start": "node index.js",
+                                                      "dev": "nodemon index.js"
+и запускаем scripts в терминале npm run dev
+11.создаем gitignore файл и пишем в нем \node_modules
+                                        .env

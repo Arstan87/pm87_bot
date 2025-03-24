@@ -1,18 +1,20 @@
 {
-  "name": "pm87_bot",
+  "name": "pm2",
   "version": "1.0.0",
-  "description": "Telegram bot for PM87",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "dependencies": {
-    "node-telegram-bot-api": "^0.61.0",
-    "dotenv": "^16.0.0",
-    "express": "^4.18.2"
+    "dotenv": "^16.4.7",
+    "telegraf": "^4.16.3"
   },
-  "engines": {
-    "node": "18.x"
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }

@@ -1,20 +1,29 @@
 {
-  "name": "pm2",
+  "name": "pm87_bot",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.18.2",
+    "node-telegram-bot-api": "^0.61.0"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arstan87/pm87_bot.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "dotenv": "^16.4.7",
-    "telegraf": "^4.16.3"
+  "bugs": {
+    "url": "https://github.com/Arstan87/pm87_bot/issues"
   },
-  "devDependencies": {
-    "nodemon": "^3.1.9"
-  }
+  "homepage": "https://github.com/Arstan87/pm87_bot#readme",
+  "description": ""
 }
